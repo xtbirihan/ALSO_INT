@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZINT_000_GUID</ARBGB>
+    <MASTERLANG>T</MASTERLANG>
+    <STEXT>GUID Doğrulama Entegrasyonu Mesaj Sınıfı</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;1 &amp;2 &amp;3 &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>GUID boş olamaz!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>GUID daha önce işlenmiştir!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>İrsaliye numarası boş olamaz!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>İrsaliye tarihi boş olamaz!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Teslimat: &amp;1 Mal çıkışı daha önceden yapılmıştır!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>006</MSGNR>
+     <TEXT>Teslimat: &amp;1 bulunamadı!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>007</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem: &amp;2 bulunamadı!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>008</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem: &amp;2 Satış miktarı, teslimat miktarından büyük olamaz!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>009</MSGNR>
+     <TEXT>GUID doğrulama hatası mevcuttur! GUID: &amp;1</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>010</MSGNR>
+     <TEXT>Teslimat: &amp;1 Malzeme: &amp;2 İade miktarı, teslimat miktarından büyük olamaz!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>011</MSGNR>
+     <TEXT>Teslimat: &amp;1 Malzeme: &amp;2 bulunamadı!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>012</MSGNR>
+     <TEXT>Teslimat: &amp;1 Mal girişi daha önceden yapılmıştır!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>013</MSGNR>
+     <TEXT>Malzeme: &amp;1 bulunamadı!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>014</MSGNR>
+     <TEXT>Net ağırlık boş olamaz!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>015</MSGNR>
+     <TEXT>Ağırlık birimi boş olamaz!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>Teslimat boş olamaz!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Teslimat: &amp;1 Mal çıkışı yapılmamış, mal girişi yapılamaz!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>018</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem numarası boş olamaz!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>019</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem: &amp;2 Malzeme numarası aynı olmalıdır!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>020</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem: &amp;2 için Malzeme: &amp;1 bulunamadı!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem: &amp;2 Miktar boş olamaz!</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <MSGNR>022</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem: &amp;2 Depo yeri boş olamaz!</TEXT>
+    </T100>
+   </T100>
+   <I18N_LANGS>
+    <LANGU>T</LANGU>
+   </I18N_LANGS>
+   <T100T>
+    <T100T>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZINT_000_GUID</ARBGB>
+     <STEXT>GUID Doğrulama Entegrasyonu Mesaj Sınıfı</STEXT>
+    </T100T>
+   </T100T>
+   <T100_TEXTS>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>000</MSGNR>
+     <TEXT>&amp;1 &amp;2 &amp;3 &amp;4</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>001</MSGNR>
+     <TEXT>GUID boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>002</MSGNR>
+     <TEXT>GUID daha önce işlenmiştir!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>003</MSGNR>
+     <TEXT>İrsaliye numarası boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>004</MSGNR>
+     <TEXT>İrsaliye tarihi boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>005</MSGNR>
+     <TEXT>Teslimat: &amp;1 Mal çıkışı daha önceden yapılmıştır!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>006</MSGNR>
+     <TEXT>Teslimat: &amp;1 bulunamadı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>007</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem: &amp;2 bulunamadı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>008</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem: &amp;2 Satış miktarı, teslimat miktarından büyük olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>009</MSGNR>
+     <TEXT>GUID doğrulama hatası mevcuttur! GUID: &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>010</MSGNR>
+     <TEXT>Teslimat: &amp;1 Malzeme: &amp;2 İade miktarı, teslimat miktarından büyük olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>011</MSGNR>
+     <TEXT>Teslimat: &amp;1 Malzeme: &amp;2 bulunamadı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>012</MSGNR>
+     <TEXT>Teslimat: &amp;1 Mal girişi daha önceden yapılmıştır!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>013</MSGNR>
+     <TEXT>Malzeme: &amp;1 bulunamadı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>014</MSGNR>
+     <TEXT>Net ağırlık boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>015</MSGNR>
+     <TEXT>Ağırlık birimi boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>016</MSGNR>
+     <TEXT>Teslimat boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>017</MSGNR>
+     <TEXT>Teslimat: &amp;1 Mal çıkışı yapılmamış, mal girişi yapılamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>018</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem numarası boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>019</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem: &amp;2 Malzeme numarası aynı olmalıdır!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>020</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem: &amp;2 için Malzeme: &amp;1 bulunamadı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>021</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem: &amp;2 Miktar boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>022</MSGNR>
+     <TEXT>Teslimat: &amp;1 Kalem: &amp;2 Depo yeri boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>023</MSGNR>
+     <TEXT>ASN_NO boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>024</MSGNR>
+     <TEXT>Teslimat &amp;1 daha önce gönderilmiş!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>025</MSGNR>
+     <TEXT>Teslimat &amp;1 bulunamadı.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>026</MSGNR>
+     <TEXT>Mal girişi henüz gönderilmemiş!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>027</MSGNR>
+     <TEXT>ACTUAL DATE boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>028</MSGNR>
+     <TEXT>QUANTITY_ACTUAL boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>029</MSGNR>
+     <TEXT>FROM_LOCATION &amp;1 mevcut değil!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>030</MSGNR>
+     <TEXT>Malzeme &amp;1 mevcut değil!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>031</MSGNR>
+     <TEXT>TO_LOCATION &amp;1 mevcut değil!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>032</MSGNR>
+     <TEXT>Kalem &amp;1 bulunamadı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>033</MSGNR>
+     <TEXT>Malzeme &amp;1 bulunamadı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>034</MSGNR>
+     <TEXT>work_order_no boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>035</MSGNR>
+     <TEXT>Teslimat &amp;1 daha önce gönderilmiş!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>036</MSGNR>
+     <TEXT>box_code boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>037</MSGNR>
+     <TEXT>Kalem &amp;1 bulunamadı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>038</MSGNR>
+     <TEXT>Teslimat miktarından büyük kayıt gelemez!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>039</MSGNR>
+     <TEXT>record_no boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>040</MSGNR>
+     <TEXT>date_bol boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>041</MSGNR>
+     <TEXT>bol_nr boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>042</MSGNR>
+     <TEXT>kayıt SAP&apos;den gönderilen bir kayıt değil</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>043</MSGNR>
+     <TEXT>Kayıt daha önce gönderilmiş</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>044</MSGNR>
+     <TEXT>Gerçekleşen virman miktarı, talep edilenden büyük kayıt gelemez</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>045</MSGNR>
+     <TEXT>document_no boş olamaz.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>046</MSGNR>
+     <TEXT>stock_location boş olamaz.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>047</MSGNR>
+     <TEXT>quantity boş olamaz.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>048</MSGNR>
+     <TEXT>pos_no boş olamaz.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>049</MSGNR>
+     <TEXT>tip boş olamaz.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>050</MSGNR>
+     <TEXT>PLANNED_DATE boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>051</MSGNR>
+     <TEXT>DOC_NO boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>052</MSGNR>
+     <TEXT>QUANTITY_ACTUAL boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>053</MSGNR>
+     <TEXT>pos_no boş olamaz.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>054</MSGNR>
+     <TEXT>ARTICLE_CODE boş olamaz.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>055</MSGNR>
+     <TEXT>Date boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>056</MSGNR>
+     <TEXT>Time boş olamaz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>057</MSGNR>
+     <TEXT>box_date boş olamaz!</TEXT>
+    </item>
+   </T100_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

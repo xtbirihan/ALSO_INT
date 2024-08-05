@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_SPRX" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROXY_HEADER>
+    <item>
+     <OBJECT>TABL</OBJECT>
+     <OBJ_NAME>ZINT_000_DT_SAP2EKOL_GUIDCONFI</OBJ_NAME>
+     <OBJECT_M>TABL</OBJECT_M>
+     <OBJ_NAME_M>ZINT_000_DT_SAP2EKOL_GUIDCONF2</OBJ_NAME_M>
+     <HASH_ID>32317A0521BB8336354031B8EBAC2F21B09659EE</HASH_ID>
+     <ID>&lt;type&gt; HEADER &lt;element&gt; HEADER &lt;type&gt; DT_Sap2Ekol_GUIDConfirmation urn:mavi.com.tr/Ekol/MM/GUIDConfirmation urn:mavi.com.tr/Ekol/MM/GUIDConfirmation</ID>
+     <IFR_TYPE>type</IFR_TYPE>
+     <IFR_NAME>HEADER</IFR_NAME>
+     <IFR_NSPCE>urn:mavi.com.tr/Ekol/MM/GUIDConfirmation</IFR_NSPCE>
+     <IFR_GNSPCE>urn:mavi.com.tr/Ekol/MM/GUIDConfirmation</IFR_GNSPCE>
+     <GEN_VERS>0005</GEN_VERS>
+     <PREFIX>ZINT_000_</PREFIX>
+     <CATEGORY>ifmtypedef</CATEGORY>
+     <X-ML_NSPCE>urn:mavi.com.tr/Ekol/MM/GUIDConfirmation</X-ML_NSPCE>
+     <X-ML_NAME>HEADER</X-ML_NAME>
+    </item>
+   </PROXY_HEADER>
+   <PROXY_DATA>
+    <item>
+     <OBJECT>TABL</OBJECT>
+     <OBJ_NAME>ZINT_000_DT_SAP2EKOL_GUIDCONFI</OBJ_NAME>
+     <OBJECT1>FIEL</OBJECT1>
+     <OBJ_NAME1>GUID</OBJ_NAME1>
+     <OBJECT2>FIEL</OBJECT2>
+     <OBJ_NAME2>GUID</OBJ_NAME2>
+     <ID>&lt;element&gt; GUID &lt;type&gt; HEADER &lt;element&gt; HEADER &lt;type&gt; DT_Sap2Ekol_GUIDConfirmation urn:mavi.com.tr/Ekol/MM/GUIDConfirmation urn:mavi.com.tr/Ekol/MM/GUIDConfirmation</ID>
+     <IFR_TYPE>element</IFR_TYPE>
+     <IFR_NAME>GUID</IFR_NAME>
+     <IFR_LANGU>EN</IFR_LANGU>
+     <IFR_TAGTYP>E</IFR_TAGTYP>
+     <IFR_MAXOCC>1</IFR_MAXOCC>
+     <IFR_OPTNL>X</IFR_OPTNL>
+     <IFR_XSDTYP>string</IFR_XSDTYP>
+     <IFR_SCALE>-2</IFR_SCALE>
+     <R3_TYPE>FIEL</R3_TYPE>
+     <R3_NAME>GUID</R3_NAME>
+     <R3_DATATYP>STRG</R3_DATATYP>
+     <R3_SEQNUM>000003</R3_SEQNUM>
+    </item>
+    <item>
+     <OBJECT>TABL</OBJECT>
+     <OBJ_NAME>ZINT_000_DT_SAP2EKOL_GUIDCONFI</OBJ_NAME>
+     <OBJECT1>FIEL</OBJECT1>
+     <OBJ_NAME1>INTEG_SUB_TYPE</OBJ_NAME1>
+     <OBJECT2>FIEL</OBJECT2>
+     <OBJ_NAME2>INTEG_SUB_TYPE</OBJ_NAME2>
+     <ID>&lt;element&gt; IntegSubType &lt;type&gt; HEADER &lt;element&gt; HEADER &lt;type&gt; DT_Sap2Ekol_GUIDConfirmation urn:mavi.com.tr/Ekol/MM/GUIDConfirmation urn:mavi.com.tr/Ekol/MM/GUIDConfirmation</ID>
+     <IFR_TYPE>element</IFR_TYPE>
+     <IFR_NAME>IntegSubType</IFR_NAME>
+     <IFR_LANGU>EN</IFR_LANGU>
+     <IFR_TAGTYP>E</IFR_TAGTYP>
+     <IFR_MAXOCC>1</IFR_MAXOCC>
+     <IFR_OPTNL>X</IFR_OPTNL>
+     <IFR_XSDTYP>string</IFR_XSDTYP>
+     <IFR_SCALE>-2</IFR_SCALE>
+     <R3_TYPE>FIEL</R3_TYPE>
+     <R3_NAME>INTEG_SUB_TYPE</R3_NAME>
+     <R3_DATATYP>STRG</R3_DATATYP>
+     <R3_SEQNUM>000002</R3_SEQNUM>
+    </item>
+    <item>
+     <OBJECT>TABL</OBJECT>
+     <OBJ_NAME>ZINT_000_DT_SAP2EKOL_GUIDCONFI</OBJ_NAME>
+     <OBJECT1>FIEL</OBJECT1>
+     <OBJ_NAME1>INTEG_TYPE</OBJ_NAME1>
+     <OBJECT2>FIEL</OBJECT2>
+     <OBJ_NAME2>INTEG_TYPE</OBJ_NAME2>
+     <ID>&lt;element&gt; IntegType &lt;type&gt; HEADER &lt;element&gt; HEADER &lt;type&gt; DT_Sap2Ekol_GUIDConfirmation urn:mavi.com.tr/Ekol/MM/GUIDConfirmation urn:mavi.com.tr/Ekol/MM/GUIDConfirmation</ID>
+     <IFR_TYPE>element</IFR_TYPE>
+     <IFR_NAME>IntegType</IFR_NAME>
+     <IFR_LANGU>EN</IFR_LANGU>
+     <IFR_TAGTYP>E</IFR_TAGTYP>
+     <IFR_MAXOCC>1</IFR_MAXOCC>
+     <IFR_OPTNL>X</IFR_OPTNL>
+     <IFR_XSDTYP>string</IFR_XSDTYP>
+     <IFR_SCALE>-2</IFR_SCALE>
+     <R3_TYPE>FIEL</R3_TYPE>
+     <R3_NAME>INTEG_TYPE</R3_NAME>
+     <R3_DATATYP>STRG</R3_DATATYP>
+     <R3_SEQNUM>000001</R3_SEQNUM>
+    </item>
+    <item>
+     <OBJECT>TABL</OBJECT>
+     <OBJ_NAME>ZINT_000_DT_SAP2EKOL_GUIDCONFI</OBJ_NAME>
+     <OBJECT1>TABL</OBJECT1>
+     <OBJ_NAME1>ZINT_000_DT_SAP2EKOL_GUIDCONFI</OBJ_NAME1>
+     <OBJECT2>TABL</OBJECT2>
+     <OBJ_NAME2>ZINT_000_DT_SAP2EKOL_GUIDCONFI</OBJ_NAME2>
+     <ID>&lt;type&gt; HEADER &lt;element&gt; HEADER &lt;type&gt; DT_Sap2Ekol_GUIDConfirmation urn:mavi.com.tr/Ekol/MM/GUIDConfirmation urn:mavi.com.tr/Ekol/MM/GUIDConfirmation</ID>
+     <IFR_TYPE>type</IFR_TYPE>
+     <IFR_NAME>HEADER</IFR_NAME>
+     <IFR_LANGU>EN</IFR_LANGU>
+     <IFR_SCALE>-2</IFR_SCALE>
+     <R3_TYPE>TABL</R3_TYPE>
+     <R3_NAME>ZINT_000_DT_SAP2EKOL_GUIDCONFI</R3_NAME>
+     <R3_TEXT>Proxy Structure (generated)</R3_TEXT>
+     <CATEGORY>ifmtypedef</CATEGORY>
+    </item>
+   </PROXY_DATA>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZINT_000_MC</ARBGB>
+    <MASTERLANG>T</MASTERLANG>
+    <STEXT>Entegrasyon mesajları</STEXT>
+   </T100A>
+   <I18N_LANGS>
+    <LANGU>T</LANGU>
+   </I18N_LANGS>
+   <T100T>
+    <T100T>
+     <SPRSL>T</SPRSL>
+     <ARBGB>ZINT_000_MC</ARBGB>
+     <STEXT>Entegrasyon mesajları</STEXT>
+    </T100T>
+   </T100T>
+   <T100_TEXTS>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>000</MSGNR>
+     <TEXT>Malzeme gönderim idoc&apos;u tetiklendi. Malzeme: &amp;1 User: &amp;2 &amp;3 &amp;4</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>001</MSGNR>
+     <TEXT>GUID: &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>002</MSGNR>
+     <TEXT>&amp;1 gönderimi tetiklendi! &amp;2 &amp;3 &amp;4</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>003</MSGNR>
+     <TEXT>Malzeme bilgileri PO sistemine iletildi.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>004</MSGNR>
+     <TEXT>&amp;1 içeri alımı tetiklendi! &amp;2 &amp;3 &amp;4</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>005</MSGNR>
+     <TEXT>QC Malzeme listesi PO sistemine iletildi.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>006</MSGNR>
+     <TEXT>Teslimat işleme için listeye alındı! Telimat no: &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>007</MSGNR>
+     <TEXT>Teslimat sistemde bulunamadı! Teslimat no: &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>008</MSGNR>
+     <TEXT>Belge yaratıldı! &amp;1 &amp;2 &amp;3 &amp;4</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>009</MSGNR>
+     <TEXT>Mesaj işlemeye alındı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>010</MSGNR>
+     <TEXT>Talep reddedildi!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>011</MSGNR>
+     <TEXT>Başlık tablosu okunamadı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>012</MSGNR>
+     <TEXT>Teslimatın sevkiyat şeklini belirleyiniz!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>013</MSGNR>
+     <TEXT>Linklenmiş gönderilen teslimatlar bulunamadı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>014</MSGNR>
+     <TEXT>Belge ters kayıt alınıyor! &amp;1 &amp;2</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>015</MSGNR>
+     <TEXT>Teslimat bulunamadı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>016</MSGNR>
+     <TEXT>Mal çıkışı yapıldı! &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>017</MSGNR>
+     <TEXT>Teslimat statüsü sorgulanıyor! Teslimat: &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>018</MSGNR>
+     <TEXT>Ekolden iptal sorgu dönüşü!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>019</MSGNR>
+     <TEXT>Tablo bakımı eksik! &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>020</MSGNR>
+     <TEXT>&amp; numaralı teslimatın kargo numarası &amp; dır.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>021</MSGNR>
+     <TEXT>Mal girişi yapıldı! &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>022</MSGNR>
+     <TEXT>Asorti malzeme bloke stoktan tahdisize alındı! &amp;1 &amp;2</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>023</MSGNR>
+     <TEXT>Teslimat kalem miktarları güncellendi! &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>024</MSGNR>
+     <TEXT>Fazla gönderim nedeniyle ürünler sanal depoya geri gönderiliyor! &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>025</MSGNR>
+     <TEXT>Sipariş yaratıldı &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>026</MSGNR>
+     <TEXT>Virman servisi çağrılıyor!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>027</MSGNR>
+     <TEXT>Virman belgesi oluşturuldu! &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>028</MSGNR>
+     <TEXT>&amp; malzemesi başarılı bir şekilde yaratılmıştır.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>029</MSGNR>
+     <TEXT>&amp; malzeme kodu hatalıdır</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>030</MSGNR>
+     <TEXT>Transfer siparişi yaratıldı</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>031</MSGNR>
+     <TEXT>İade onay bilgisi iletildi.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>032</MSGNR>
+     <TEXT>Transfer talebi oluşturuldu - &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>033</MSGNR>
+     <TEXT>Teslimat yaratıldı</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>034</MSGNR>
+     <TEXT>Gönderen bayiden mal çıkışı yapıldı - &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>035</MSGNR>
+     <TEXT>Ekol için teslimat oluşturuldu - &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>036</MSGNR>
+     <TEXT>Ekol&apos;den sanal mal girişi yapıldı - &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>037</MSGNR>
+     <TEXT>Ekol&apos;den MAVI mağazasına SNS yaratıldı - &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>038</MSGNR>
+     <TEXT>Ekol&apos;den alan bayiye SAS yaratıldı - &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>039</MSGNR>
+     <TEXT>Ekol&apos;den sanal mal çıkışı yapıldı - &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>040</MSGNR>
+     <TEXT>&amp; - malzeme tipi hatalıdır</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>041</MSGNR>
+     <TEXT>&amp; - satış belgesi oluşturuldu</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>042</MSGNR>
+     <TEXT>Kasası bağlı olmayan bayiden teslimat oluşturuldu - &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>043</MSGNR>
+     <TEXT>Ekol&apos;den sanal mal girişi yapıldı - &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>044</MSGNR>
+     <TEXT>(ZTA3)Ekol&apos;den alan bayiye satış siparişi yaratıldı - &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>045</MSGNR>
+     <TEXT>Ekol&apos;den alan bayiye teslimat yaratıldı - &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>046</MSGNR>
+     <TEXT>&amp;1 belgesi için GR mal kabul dönüşü henüz tamamlanmadı.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>047</MSGNR>
+     <TEXT>Mal girişi sırasında hata</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>048</MSGNR>
+     <TEXT>&amp;1 belgesi için BOX dönüşü henüz tamamlanmadı.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>049</MSGNR>
+     <TEXT>Gönderen bayiden mal çıkışı yapıldı - &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>050</MSGNR>
+     <TEXT>Mal çıkışı sırasında hata</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>051</MSGNR>
+     <TEXT>Zorunlu alanları doldurun(&amp; &amp; &amp; &amp;)</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>052</MSGNR>
+     <TEXT>SAS: &amp; Mlzm: &amp; Koli: &amp; Talep Eden: &amp; daha önce gönderilmiş!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>053</MSGNR>
+     <TEXT>zint_000_t_003 tablosunda &amp; GUID&apos;i bulunamadı!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>054</MSGNR>
+     <TEXT>Mağaza ek alanları işlendi</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>055</MSGNR>
+     <TEXT>&amp; talep numarası daha önce gönderilmiş!</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>056</MSGNR>
+     <TEXT>Mesaj gönderildi! Döküman no: &amp;1</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>057</MSGNR>
+     <TEXT>&amp; Malzeme için &amp; &amp; stok eksik.</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>058</MSGNR>
+     <TEXT>&amp; malzemesi için &amp; ile ilişkili olarak yalnızca &amp; &amp; kullanılabilir</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>059</MSGNR>
+     <TEXT>Mal çıkışı gerçekleşmedi.(Sistem bir hata dönmedi): &amp;</TEXT>
+    </item>
+    <item>
+     <SPRSL>T</SPRSL>
+     <MSGNR>100</MSGNR>
+     <TEXT>&amp;1 &amp;2 &amp;3 &amp;4</TEXT>
+    </item>
+   </T100_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

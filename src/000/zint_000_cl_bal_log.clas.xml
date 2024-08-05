@@ -1,0 +1,374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZINT_000_CL_BAL_LOG</CLSNAME>
+    <LANGU>T</LANGU>
+    <DESCRIPT>Log yapıları</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <LONGTEXTS_CO>
+    <item>
+     <DOKIL>
+      <ID>CO</ID>
+      <OBJECT>ZINT_000_CL_BAL_LOG           LOG_CREATE</OBJECT>
+      <LANGU>T</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0001</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00010</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>ZINT_000_CL_BAL_LOG           LOG_CREATE</TDNAME>
+      <TDID>CO</TDID>
+      <TDSPRAS>T</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00001</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FUNCTIONALITY&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PRECONDITION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;RESULT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PARAMETERS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXCEPTIONS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;HINTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>CREATE OBJECT go_ballog.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>  DATA(lv_handle) = go_ballog-&gt;log_create( iv_object = &apos;ZMM_000&apos;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>iv_subobject = &apos;PRDCUNT&apos; ).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>  &quot;*&quot; Method Tetiklendi**</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>  go_ballog-&gt;log_add( is_message = VALUE #( msgty = &apos;S&apos; msgid = gc_msgid</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>msgno = &apos;001&apos; ) ).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>  &quot;*&quot; Method Tamamlandı**</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>  go_ballog-&gt;log_add( is_message = VALUE #( msgty = &apos;S&apos; msgid = gc_msgid</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>msgno = &apos;002&apos; ) ).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>/</TDFORMAT>
+       <TDLINE>  go_ballog-&gt;log_save( ).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS_CO>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>MT_LOGS</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: İletiler içeren tablo</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_DIRECTION</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Yön</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_HANDLE</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Günlük tanıtıcısı</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_INT_SUBTYPE</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Entegrasyon alt tipi</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_INT_TYPE</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Entegrasyon tipi</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_SEND</CMPNAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Gönderim/Alım istemi</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_PARAMETER</CMPNAME>
+     <SCONAME>IV_INT_TYPE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Entegrasyon tipi</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_PARAMETER</CMPNAME>
+     <SCONAME>IV_PARAM</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Alan adı</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_ADD</CMPNAME>
+     <SCONAME>IS_MESSAGE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: İletinin verileri</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_ADD</CMPNAME>
+     <SCONAME>IT_MESSAGE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: İletiler içeren tablo</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_ADD</CMPNAME>
+     <SCONAME>IV_HANDLE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Günlük tanıtıcısı</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_CREATE</CMPNAME>
+     <SCONAME>IV_EXTERNAL_NUMBER</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Harici tanıtıcı</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_CREATE</CMPNAME>
+     <SCONAME>IV_INT_SUBTYPE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Alt nesne</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_CREATE</CMPNAME>
+     <SCONAME>IV_INT_TYPE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Nesne adı (uygulama kısaltması)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_CREATE</CMPNAME>
+     <SCONAME>IV_SEND</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Gönderim/Alım işlemi</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_CREATE</CMPNAME>
+     <SCONAME>RV_HANDLE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Günlük tanıtıcısı</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_DELETE</CMPNAME>
+     <SCONAME>IV_HANDLE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Günlük tanıtıcısı</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_DISPLAY</CMPNAME>
+     <SCONAME>IV_HANDLE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Günlük tanıtıcısı</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_ERROR_FOUND</CMPNAME>
+     <SCONAME>RV_FOUND</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Bool değişkenleri (X= doğru, -= yanlış, boşluk= bilinmiyor)</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_GET_ADDED_MESSAGES</CMPNAME>
+     <SCONAME>T_MSG</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: İletiler içeren tablo</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_REFRESH</CMPNAME>
+     <SCONAME>IV_HANDLE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Günlük tanıtıcısı</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_SAVE</CMPNAME>
+     <SCONAME>ES_LOGNO</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Yeni tayin edilen LOGNUMBER</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_SAVE</CMPNAME>
+     <SCONAME>ET_LOGS</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: İletiler içeren tablo</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_SAVE</CMPNAME>
+     <SCONAME>IV_COMMIT</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Commit work?</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_SAVE</CMPNAME>
+     <SCONAME>IV_GUID</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>GUID</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_SAVE</CMPNAME>
+     <SCONAME>IV_HANDLE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Günlük tanıtıcısı</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_SAVE</CMPNAME>
+     <SCONAME>IV_SAVE_ALL</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Seçme kutusu</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_SAVE</CMPNAME>
+     <SCONAME>IV_STATU</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Statü</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>LOG_SAVE</CMPNAME>
+     <SCONAME>IV_UPDATE_TASK</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Seçme kutusu</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_BALLOG</CMPNAME>
+     <SCONAME>ET_MESSAGES</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Ballog mesajları</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>READ_BALLOG</CMPNAME>
+     <SCONAME>IV_BALLOG_NUMBER</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Günlük numarası</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>STATU_CHANGE</CMPNAME>
+     <SCONAME>ET_RETURN</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Return table</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>STATU_CHANGE</CMPNAME>
+     <SCONAME>IV_BALLOG_ID</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Günlük tanıtıcısı</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>STATU_CHANGE</CMPNAME>
+     <SCONAME>IV_BALLOG_NUMBER</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Uygulama günlüğü: Günlük numarası</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>STATU_CHANGE</CMPNAME>
+     <SCONAME>IV_COMMIT</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Tek basamaklı gösterge</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>STATU_CHANGE</CMPNAME>
+     <SCONAME>IV_GUID</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>GUID</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>STATU_CHANGE</CMPNAME>
+     <SCONAME>IV_INT_SUBTYPE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Entegrasyon alt tipi</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>STATU_CHANGE</CMPNAME>
+     <SCONAME>IV_INT_TYPE</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Entegrasyon tipi</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>STATU_CHANGE</CMPNAME>
+     <SCONAME>IV_SEND</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>İlk kayıt</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>STATU_CHANGE</CMPNAME>
+     <SCONAME>IV_STATU</SCONAME>
+     <LANGU>T</LANGU>
+     <DESCRIPT>Statü</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>

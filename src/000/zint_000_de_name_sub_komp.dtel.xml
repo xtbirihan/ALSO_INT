@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZINT_000_DE_NAME_SUB_KOMP</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>FDNAME</DOMNAME>
+    <MEMORYID>DFD</MEMORYID>
+    <HEADLEN>10</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>18</SCRLEN3>
+    <DDTEXT>Component name</DDTEXT>
+    <REPTEXT>Component</REPTEXT>
+    <SCRTEXT_S>Component</SCRTEXT_S>
+    <SCRTEXT_M>Component name</SCRTEXT_M>
+    <SCRTEXT_L>Component name</SCRTEXT_L>
+    <APPLCLASS>SDIC</APPLCLASS>
+    <AUTHCLASS>01</AUTHCLASS>
+    <DTELMASTER>D</DTELMASTER>
+    <DEFFDNAME>FIELD_NAME</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>D</LANGU>
+    <LANGU>T</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Komponentenname</DDTEXT>
+     <REPTEXT>Komponente</REPTEXT>
+     <SCRTEXT_S>Komponente</SCRTEXT_S>
+     <SCRTEXT_M>Komponentenname</SCRTEXT_M>
+     <SCRTEXT_L>Komponentenname</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DDTEXT>Sub component name</DDTEXT>
+     <REPTEXT>Sub Compon</REPTEXT>
+     <SCRTEXT_S>Sub comp</SCRTEXT_S>
+     <SCRTEXT_M>Sub component</SCRTEXT_M>
+     <SCRTEXT_L>Sub component name</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

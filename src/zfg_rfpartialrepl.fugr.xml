@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>INT RF modules</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>SAPLZFG_RFPARTIALREPL</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>ZINT_PARTIALREPL_PAI</FUNCNAME>
+     <SHORT_TEXT>INT RF Picking - Place HUTO PAI</SHORT_TEXT>
+     <CHANGING>
+      <RSCHA>
+       <PARAMETER>SELECTION</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_SELECTION</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>RESOURCE</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RSRC</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>WHO</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_WHO_INT</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>ORDIM_CONFIRM</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_ORDIM_CONFIRM</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>NESTED_HU</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_RF_NESTED_HU</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>TT_ORDIM_CONFIRM</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/TT_RF_ORDIM_CONFIRM</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>TT_NESTED_HU</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/TT_RF_NESTED_HU</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>T_RF_PICK_HUS</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/TT_RF_PICK_HUS</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>WME_VERIF</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/S_WME_VERIF</TYP>
+      </RSCHA>
+      <RSCHA>
+       <PARAMETER>ZCS_PARTIAL_REPL_HU</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZSTR_RF_PARTIAL_REPL_HU</TYP>
+      </RSCHA>
+     </CHANGING>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>SELECTION</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>RF selection criteria for WO execution</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>RESOURCE</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Resource and User Data</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>WHO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Internal Warehouse Order Structure</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ORDIM_CONFIRM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>RF Transfer Order Confirmation</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NESTED_HU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>RF Nested HU</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TT_ORDIM_CONFIRM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>RF Transfer Order Confirmation</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>TT_NESTED_HU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>RF Nested HU</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_RF_PICK_HUS</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>RF Pick-Handling Units</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>WME_VERIF</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Key Fields for Determining the Verification Profile in WME</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ZCS_PARTIAL_REPL_HU</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Screen Data to Place HU Screen</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZINT_TO_CANCEL</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Cancel Warehouse Task</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_LGNUM</PARAMETER>
+       <TYP>/SCWM/LGNUM</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_SUBST</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>/SCWM/RL03TSUBST</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_QNAME</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>UNAME</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_HUMI</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>XFELD</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_DLV_NOT_ASYNC</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>XFELD</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_UPDATE_TASK</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>/SCWM/RL03AVERBU</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IV_COMMIT_WORK</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>/SCWM/RL03ACOMIT</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_CANCL</PARAMETER>
+       <TYP>/SCWM/TT_CANCL</TYP>
+      </RSIMP>
+      <RSIMP>
+       <PARAMETER>IT_CANCL_EXC</PARAMETER>
+       <OPTIONAL>X</OPTIONAL>
+       <TYP>/SCWM/TT_CONF_EXC</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ET_BAPIRET</PARAMETER>
+       <TYP>BAPIRETTAB</TYP>
+      </RSEXP>
+      <RSEXP>
+       <PARAMETER>EV_SEVERITY</PARAMETER>
+       <TYP>BAPI_MTYPE</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_LGNUM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Warehouse Number/Warehouse Complex</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_SUBST</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Behavior During Cancellation of Items for Subsystems</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_QNAME</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>User Name</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_HUMI</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Checkbox</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_DLV_NOT_ASYNC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Checkbox</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_UPDATE_TASK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Execute Posting Asynchronously Via Update Task</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IV_COMMIT_WORK</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Processing with COMMIT WORK</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_CANCL</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table of Warehouse Tasks for Cancellation</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>IT_CANCL_EXC</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Exception Codes for WT Confirmation Item</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ET_BAPIRET</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Table with BAPI Return Information</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>EV_SEVERITY</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Message type: S Success, E Error, W Warning, I Info, A Abort</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+    <item>
+     <FUNCNAME>ZNT_CONFIG_READ_SINGLE</FUNCNAME>
+     <SHORT_TEXT>Functionality for reading general consumer products param. config.</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IV_LGNUM</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>/SCWM/LGNUM</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>ES_CONFIG</PARAMETER>
+       <REFERENCE>X</REFERENCE>
+       <TYP>ZTINT_CONFIG</TYP>
+      </RSEXP>
+     </EXPORT>
+     <EXCEPTION>
+      <RSEXC>
+       <EXCEPTION>NOT_FOUND</EXCEPTION>
+      </RSEXC>
+     </EXCEPTION>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IV_LGNUM</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Warehouse Number/Warehouse Complex</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>ES_CONFIG</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>General Retail |Configuration Settings</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>NOT_FOUND</PARAMETER>
+       <KIND>X</KIND>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

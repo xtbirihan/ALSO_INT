@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TRAN" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TSTC>
+    <TCODE>ZPI_CREATE</TCODE>
+    <PGMNA>SAPLZFG_UI_PI_PROCESS</PGMNA>
+    <DYPNO>0001</DYPNO>
+   </TSTC>
+   <TSTCC>
+    <TCODE>ZPI_CREATE</TCODE>
+    <S_WIN32>X</S_WIN32>
+   </TSTCC>
+   <TSTCT>
+    <SPRSL>E</SPRSL>
+    <TCODE>ZPI_CREATE</TCODE>
+    <TTEXT>Create Physical Inventory Document</TTEXT>
+   </TSTCT>
+  </asx:values>
+ </asx:abap>
+</abapGit>

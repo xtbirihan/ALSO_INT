@@ -1,0 +1,2779 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_PROG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <PROGDIR>
+    <NAME>Z_PI_STOCK_DWNLD</NAME>
+    <SUBC>1</SUBC>
+    <APPL>L</APPL>
+    <RSTAT>P</RSTAT>
+    <RLOAD>E</RLOAD>
+    <FIXPT>X</FIXPT>
+    <UCCHECK>X</UCCHECK>
+   </PROGDIR>
+   <DYNPROS>
+    <item>
+     <HEADER>
+      <PROGRAM>Z_PI_STOCK_DWNLD</PROGRAM>
+      <SCREEN>0100</SCREEN>
+      <LANGUAGE>E</LANGUAGE>
+      <DESCRIPT>Initial Screen</DESCRIPT>
+      <TYPE>N</TYPE>
+      <NEXTSCREEN>0100</NEXTSCREEN>
+      <LINES>049</LINES>
+      <COLUMNS>218</COLUMNS>
+     </HEADER>
+     <CONTAINERS>
+      <RPY_DYCATT>
+       <TYPE>SCREEN</TYPE>
+       <NAME>SCREEN</NAME>
+      </RPY_DYCATT>
+     </CONTAINERS>
+     <FIELDS>
+      <RPY_DYFATC>
+       <CONT_TYPE>SCREEN</CONT_TYPE>
+       <CONT_NAME>SCREEN</CONT_NAME>
+       <TYPE>OKCODE</TYPE>
+       <NAME>OK_CODE</NAME>
+       <TEXT>____________________</TEXT>
+       <LENGTH>020</LENGTH>
+       <VISLENGTH>020</VISLENGTH>
+       <HEIGHT>001</HEIGHT>
+       <FORMAT>CHAR</FORMAT>
+       <INPUT_FLD>X</INPUT_FLD>
+      </RPY_DYFATC>
+     </FIELDS>
+     <FLOW_LOGIC>
+      <RPY_DYFLOW>
+       <LINE>PROCESS BEFORE OUTPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  MODULE STATUS_0100.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>*</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>PROCESS AFTER INPUT.</LINE>
+      </RPY_DYFLOW>
+      <RPY_DYFLOW>
+       <LINE>  MODULE USER_COMMAND_0100.</LINE>
+      </RPY_DYFLOW>
+     </FLOW_LOGIC>
+    </item>
+   </DYNPROS>
+   <CUA>
+    <ADM>
+     <ACTCODE>000003</ACTCODE>
+     <MENCODE>000021</MENCODE>
+     <PFKCODE>000003</PFKCODE>
+    </ADM>
+    <STA>
+     <RSMPE_STAT>
+      <CODE>STATUS0100</CODE>
+      <MODAL>D</MODAL>
+      <ACTCODE>000003</ACTCODE>
+      <PFKCODE>000003</PFKCODE>
+      <BUTCODE>0002</BUTCODE>
+      <INT_NOTE>Download Storage bins</INT_NOTE>
+     </RSMPE_STAT>
+    </STA>
+    <FUN>
+     <RSMPE_FUNT>
+      <CODE>%PRI</CODE>
+      <TEXTNO>002</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_PRINT</TEXT_NAME>
+      <ICON_ID>@0X@</ICON_ID>
+      <FUN_TEXT>Print</FUN_TEXT>
+      <PATH>P</PATH>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>%SC</CODE>
+      <TEXTNO>003</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_SEARCH</TEXT_NAME>
+      <ICON_ID>@13@</ICON_ID>
+      <FUN_TEXT>Find</FUN_TEXT>
+      <PATH>F</PATH>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>%SC+</CODE>
+      <TEXTNO>002</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_SEARCH_NEXT</TEXT_NAME>
+      <ICON_ID>@4E@</ICON_ID>
+      <FUN_TEXT>Find next</FUN_TEXT>
+      <PATH>X</PATH>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>BACK</CODE>
+      <TEXTNO>004</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <FUN_TEXT>Back</FUN_TEXT>
+      <INFO_TEXT>Back</INFO_TEXT>
+      <PATH>B</PATH>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>CANCEL</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <FUN_TEXT>Cancel</FUN_TEXT>
+      <INFO_TEXT>Cancel</INFO_TEXT>
+      <PATH>A</PATH>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>EXIT</CODE>
+      <TEXTNO>002</TEXTNO>
+      <TYPE>E</TYPE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <FUN_TEXT>Exit</FUN_TEXT>
+      <INFO_TEXT>Exit</INFO_TEXT>
+      <PATH>X</PATH>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>P+</CODE>
+      <TEXTNO>002</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <FUN_TEXT>Next page</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>P++</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_LAST_PAGE</TEXT_NAME>
+      <ICON_ID>@31@</ICON_ID>
+      <FUN_TEXT>Last Page</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>P-</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_PREVIOUS_PAGE</TEXT_NAME>
+      <ICON_ID>@2Z@</ICON_ID>
+      <FUN_TEXT>Previous Page</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>P--</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_FIRST_PAGE</TEXT_NAME>
+      <ICON_ID>@2Y@</ICON_ID>
+      <FUN_TEXT>First Page</FUN_TEXT>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>PICK</CODE>
+      <TEXTNO>003</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_SELECT_DETAIL</TEXT_NAME>
+      <ICON_ID>@16@</ICON_ID>
+      <FUN_TEXT>Choose</FUN_TEXT>
+      <PATH>S</PATH>
+     </RSMPE_FUNT>
+     <RSMPE_FUNT>
+      <CODE>PROT</CODE>
+      <TEXTNO>001</TEXTNO>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT_NAME>ICON_PROTOCOL</TEXT_NAME>
+      <ICON_ID>@DH@</ICON_ID>
+      <FUN_TEXT>Message Log</FUN_TEXT>
+      <INFO_TEXT>Message Log</INFO_TEXT>
+      <PATH>L</PATH>
+     </RSMPE_FUNT>
+    </FUN>
+    <MEN>
+     <RSMPE_MEN>
+      <CODE>000010</CODE>
+      <NO>01</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>EXIT</REF_CODE>
+      <REF_NO>002</REF_NO>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000012</CODE>
+      <NO>01</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>CANCEL</REF_CODE>
+      <REF_NO>001</REF_NO>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000013</CODE>
+      <NO>01</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>PROT</REF_CODE>
+      <REF_NO>001</REF_NO>
+     </RSMPE_MEN>
+     <RSMPE_MEN>
+      <CODE>000013</CODE>
+      <NO>02</NO>
+      <REF_TYPE>F</REF_TYPE>
+      <REF_CODE>BACK</REF_CODE>
+      <REF_NO>004</REF_NO>
+     </RSMPE_MEN>
+    </MEN>
+    <MTX>
+     <RSMPE_MNLT>
+      <CODE>000010</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>List</TEXT>
+      <PATH>L</PATH>
+     </RSMPE_MNLT>
+     <RSMPE_MNLT>
+      <CODE>000012</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>Edit</TEXT>
+      <PATH>E</PATH>
+     </RSMPE_MNLT>
+     <RSMPE_MNLT>
+      <CODE>000013</CODE>
+      <TEXT_TYPE>S</TEXT_TYPE>
+      <TEXT>Goto</TEXT>
+      <PATH>G</PATH>
+     </RSMPE_MNLT>
+    </MTX>
+    <ACT>
+     <RSMPE_ACT>
+      <CODE>000003</CODE>
+      <NO>01</NO>
+      <MENUCODE>000010</MENUCODE>
+     </RSMPE_ACT>
+     <RSMPE_ACT>
+      <CODE>000003</CODE>
+      <NO>02</NO>
+      <MENUCODE>000012</MENUCODE>
+     </RSMPE_ACT>
+     <RSMPE_ACT>
+      <CODE>000003</CODE>
+      <NO>03</NO>
+      <MENUCODE>000013</MENUCODE>
+     </RSMPE_ACT>
+    </ACT>
+    <BUT>
+     <RSMPE_BUT>
+      <PFK_CODE>000003</PFK_CODE>
+      <CODE>0002</CODE>
+      <NO>01</NO>
+      <PFNO>23</PFNO>
+     </RSMPE_BUT>
+    </BUT>
+    <PFK>
+     <RSMPE_PFK>
+      <CODE>000003</CODE>
+      <PFNO>02</PFNO>
+      <FUNCODE>PICK</FUNCODE>
+      <FUNNO>003</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000003</CODE>
+      <PFNO>03</PFNO>
+      <FUNCODE>BACK</FUNCODE>
+      <FUNNO>004</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000003</CODE>
+      <PFNO>12</PFNO>
+      <FUNCODE>CANCEL</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000003</CODE>
+      <PFNO>15</PFNO>
+      <FUNCODE>EXIT</FUNCODE>
+      <FUNNO>002</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000003</CODE>
+      <PFNO>23</PFNO>
+      <FUNCODE>PROT</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000003</CODE>
+      <PFNO>71</PFNO>
+      <FUNCODE>%SC</FUNCODE>
+      <FUNNO>003</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000003</CODE>
+      <PFNO>80</PFNO>
+      <FUNCODE>P--</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000003</CODE>
+      <PFNO>81</PFNO>
+      <FUNCODE>P-</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000003</CODE>
+      <PFNO>82</PFNO>
+      <FUNCODE>P+</FUNCODE>
+      <FUNNO>002</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000003</CODE>
+      <PFNO>83</PFNO>
+      <FUNCODE>P++</FUNCODE>
+      <FUNNO>001</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000003</CODE>
+      <PFNO>84</PFNO>
+      <FUNCODE>%SC+</FUNCODE>
+      <FUNNO>002</FUNNO>
+     </RSMPE_PFK>
+     <RSMPE_PFK>
+      <CODE>000003</CODE>
+      <PFNO>86</PFNO>
+      <FUNCODE>%PRI</FUNCODE>
+      <FUNNO>002</FUNNO>
+     </RSMPE_PFK>
+    </PFK>
+    <SET>
+     <RSMPE_STAF>
+      <STATUS>STATUS0100</STATUS>
+      <FUNCTION>%PRN</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>STATUS0100</STATUS>
+      <FUNCTION>BACK</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>STATUS0100</STATUS>
+      <FUNCTION>CANCEL</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>STATUS0100</STATUS>
+      <FUNCTION>EXIT</FUNCTION>
+     </RSMPE_STAF>
+     <RSMPE_STAF>
+      <STATUS>STATUS0100</STATUS>
+      <FUNCTION>PROT</FUNCTION>
+     </RSMPE_STAF>
+    </SET>
+    <DOC>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>A</OBJ_TYPE>
+      <OBJ_CODE>000003</OBJ_CODE>
+      <MODAL>D</MODAL>
+      <INT_NOTE>Download Storage Bins</INT_NOTE>
+     </RSMPE_ATRT>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>B</OBJ_TYPE>
+      <OBJ_CODE>000003</OBJ_CODE>
+      <SUB_CODE>0002</SUB_CODE>
+      <MODAL>M</MODAL>
+      <INT_NOTE>Download Storage Bins</INT_NOTE>
+     </RSMPE_ATRT>
+     <RSMPE_ATRT>
+      <OBJ_TYPE>P</OBJ_TYPE>
+      <OBJ_CODE>000003</OBJ_CODE>
+      <MODAL>D</MODAL>
+      <INT_NOTE>Download Storage Bins</INT_NOTE>
+     </RSMPE_ATRT>
+    </DOC>
+    <TIT>
+     <RSMPE_TITT>
+      <CODE>TITLE0100</CODE>
+      <TEXT>&amp;1 &amp;2</TEXT>
+     </RSMPE_TITT>
+    </TIT>
+    <BIV>
+     <RSMPE_BUTS>
+      <OBJ_CODE>000003</OBJ_CODE>
+      <SUB_CODE>0002</SUB_CODE>
+      <FCODE>PROT</FCODE>
+     </RSMPE_BUTS>
+    </BIV>
+   </CUA>
+   <TPOOL>
+    <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Location-Based Selection for Warehouse</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>002</KEY>
+     <ENTRY>Product-Based Selection for Warehouse</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>003</KEY>
+     <ENTRY>Location Data</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>004</KEY>
+     <ENTRY>Product Data</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>005</KEY>
+     <ENTRY>Export to File</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>006</KEY>
+     <ENTRY>Destination</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>008</KEY>
+     <ENTRY>Select Directory for Download</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>009</KEY>
+     <ENTRY>Do you want to overwrite the file?</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>010</KEY>
+     <ENTRY>Phys. Inv. Data</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
+     <ID>I</ID>
+     <KEY>ADD</KEY>
+     <ENTRY>Additional Data</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>R</ID>
+     <ENTRY>Download Storage Bins and Count Data</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_APP</KEY>
+     <ENTRY>Append Data to Existing File</ENTRY>
+     <LENGTH>36</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_ASFILE</KEY>
+     <ENTRY>Logical File</ENTRY>
+     <LENGTH>34</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_CNTR</KEY>
+     <ENTRY>Counter</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_COUND</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>18</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_CREA</KEY>
+     <ENTRY>Create New File</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_LFNAME</KEY>
+     <ENTRY>Logical File Name</ENTRY>
+     <LENGTH>25</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_LGNUM</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>24</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_LOC</KEY>
+     <ENTRY>Location-Based Selection</ENTRY>
+     <LENGTH>32</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_PATH</KEY>
+     <ENTRY>Local File Name</ENTRY>
+     <LENGTH>23</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_PCFILE</KEY>
+     <ENTRY>Local File</ENTRY>
+     <LENGTH>18</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_PROD</KEY>
+     <ENTRY>Product-Based Selection</ENTRY>
+     <LENGTH>31</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_REA</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>37</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>P_REPL</KEY>
+     <ENTRY>Replace Existing File</ENTRY>
+     <LENGTH>29</LENGTH>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SO_HUID</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SO_MFRNR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>SO_MFRPN</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>9</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_AREA</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>21</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_CAT_P</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>18</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_ENTITL</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>33</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_LPLA</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>19</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_MATNR</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>15</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+    <item>
+     <ID>S</ID>
+     <KEY>S_OWNER</KEY>
+     <ENTRY>.</ENTRY>
+     <LENGTH>13</LENGTH>
+     <SPLIT>D</SPLIT>
+    </item>
+   </TPOOL>
+   <I18N_TPOOL>
+    <item>
+     <LANGUAGE>D</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>Lokationsbasierte Selektion für Lager</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>002</KEY>
+       <ENTRY>Produktbasierte Selektion für Lager</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>003</KEY>
+       <ENTRY>Lokationsdaten</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>004</KEY>
+       <ENTRY>Produktdaten</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>005</KEY>
+       <ENTRY>Export in Datei</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>006</KEY>
+       <ENTRY>Ziel</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>008</KEY>
+       <ENTRY>Verzeichn.f.Herunterlad.ausw.</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>009</KEY>
+       <ENTRY>Wollen Sie die Datei überschreiben?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>010</KEY>
+       <ENTRY>Inventurdaten</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Lagerplätze und Zähldaten herunterladen</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_APP</KEY>
+       <ENTRY>Daten an exist. Datei anhängen</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_ASFILE</KEY>
+       <ENTRY>Logische Datei</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_CNTR</KEY>
+       <ENTRY>Zähler</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_CREA</KEY>
+       <ENTRY>Neue Datei anlegen</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LFNAME</KEY>
+       <ENTRY>Name für logische Datei</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LOC</KEY>
+       <ENTRY>Lokationsbasierte Selektion</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PATH</KEY>
+       <ENTRY>Name für lokale Datei</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PCFILE</KEY>
+       <ENTRY>Lokale Datei</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PROD</KEY>
+       <ENTRY>Produktbasierte Selektion</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_REPL</KEY>
+       <ENTRY>Vorhandene Datei ersetzen</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_COUND</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>18</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LGNUM</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_REA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>37</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SO_HUID</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>9</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SO_MFRNR</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>9</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>SO_MFRPN</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>9</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_AREA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>21</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_CAT_P</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>18</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_ENTITL</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>33</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_LPLA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>19</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_MATNR</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>15</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_OWNER</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>13</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+     </TEXTPOOL>
+    </item>
+    <item>
+     <LANGUAGE>F</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>Sélection basée sur site pour magasin</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>002</KEY>
+       <ENTRY>Sélection basée sur produit pour magasin</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>003</KEY>
+       <ENTRY>Données du site</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>004</KEY>
+       <ENTRY>Données produit</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>005</KEY>
+       <ENTRY>Exportation dans fichier</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>006</KEY>
+       <ENTRY>Cible</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>008</KEY>
+       <ENTRY>Sélectionner répertoire pour télédéchargement</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>009</KEY>
+       <ENTRY>Ecraser le fichier ?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>010</KEY>
+       <ENTRY>Données d&apos;inventaire</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Télédécharger des emplacements et des données de comptage</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_APP</KEY>
+       <ENTRY>Ajouter donn.au fichier exist.</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_ASFILE</KEY>
+       <ENTRY>Fichier logique</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_CNTR</KEY>
+       <ENTRY>Compteur</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_CREA</KEY>
+       <ENTRY>Créer nouveau fichier</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LFNAME</KEY>
+       <ENTRY>Nom du fichier logique</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LOC</KEY>
+       <ENTRY>Sélection basée sur produit</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PATH</KEY>
+       <ENTRY>Nom du fichier local</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PCFILE</KEY>
+       <ENTRY>Fichier local</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PROD</KEY>
+       <ENTRY>Sélection basée sur le produit</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_REPL</KEY>
+       <ENTRY>Remplacer fichier existant</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_COUND</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>18</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LGNUM</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_REA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>37</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_AREA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>21</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_CAT_P</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>18</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_ENTITL</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>33</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_LPLA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>19</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_MATNR</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>15</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_OWNER</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>13</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+     </TEXTPOOL>
+    </item>
+    <item>
+     <LANGUAGE>I</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>Selezione magazzino basata su ubicazione</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>002</KEY>
+       <ENTRY>Selezione magazzino basata su prodotto</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>003</KEY>
+       <ENTRY>Dati ubicazione</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>004</KEY>
+       <ENTRY>Dati prodotto</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>005</KEY>
+       <ENTRY>Esportare nel file</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>006</KEY>
+       <ENTRY>Destinazione</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>008</KEY>
+       <ENTRY>Ampl. directory per download</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>009</KEY>
+       <ENTRY>Sovrascrivere il file?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>010</KEY>
+       <ENTRY>Dati inventario</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Scaricare ubicazioni e dati conteggio</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_APP</KEY>
+       <ENTRY>I dati dipendono dal file es.</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_ASFILE</KEY>
+       <ENTRY>File logico</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_CNTR</KEY>
+       <ENTRY>Contatore</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_CREA</KEY>
+       <ENTRY>Creare nuovo file</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LFNAME</KEY>
+       <ENTRY>Nome per file logico</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LOC</KEY>
+       <ENTRY>Selezione basata su ubicazione</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PATH</KEY>
+       <ENTRY>Nome per file locale</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PCFILE</KEY>
+       <ENTRY>File locale</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PROD</KEY>
+       <ENTRY>Selezione basata su prodotto</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_REPL</KEY>
+       <ENTRY>Sostituire file esistente</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_COUND</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>18</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LGNUM</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_REA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>37</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_AREA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>21</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_CAT_P</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>18</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_ENTITL</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>33</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_LPLA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>19</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_MATNR</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>15</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_OWNER</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>13</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+     </TEXTPOOL>
+    </item>
+    <item>
+     <LANGUAGE>P</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>Seleção baseada na UG para depósito</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>002</KEY>
+       <ENTRY>Seleção baseada no produto para depósito</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>003</KEY>
+       <ENTRY>Dados da unidade gerencial</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>004</KEY>
+       <ENTRY>Dados do produto</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>005</KEY>
+       <ENTRY>Exportação para file</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>006</KEY>
+       <ENTRY>Destino</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>008</KEY>
+       <ENTRY>Sel.diretório para download</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>009</KEY>
+       <ENTRY>Sobregravar o file?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>010</KEY>
+       <ENTRY>Dados do inventário físico</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Baixar posições no depósito e dados da contagem</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_APP</KEY>
+       <ENTRY>Anexar dados ao file existente</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_ASFILE</KEY>
+       <ENTRY>File lógico</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_CNTR</KEY>
+       <ENTRY>Contador</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_CREA</KEY>
+       <ENTRY>Criar novo file</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LFNAME</KEY>
+       <ENTRY>Nome para file lógico</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LOC</KEY>
+       <ENTRY>Seleção baseada na UG</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PATH</KEY>
+       <ENTRY>Nome para file local</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PCFILE</KEY>
+       <ENTRY>Arquivo local</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PROD</KEY>
+       <ENTRY>Seleção baseada no produto</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_REPL</KEY>
+       <ENTRY>Substituir file existente</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_COUND</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>18</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LGNUM</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_REA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>37</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_AREA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>21</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_CAT_P</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>18</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_ENTITL</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>33</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_LPLA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>19</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_MATNR</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>15</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_OWNER</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>13</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+     </TEXTPOOL>
+    </item>
+    <item>
+     <LANGUAGE>S</LANGUAGE>
+     <TEXTPOOL>
+      <item>
+       <ID>I</ID>
+       <KEY>001</KEY>
+       <ENTRY>Selección basada en ubicación para almacén</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>002</KEY>
+       <ENTRY>Selección basada en producto para almacén</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>003</KEY>
+       <ENTRY>Datos de ubicación</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>004</KEY>
+       <ENTRY>Datos de producto</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>005</KEY>
+       <ENTRY>Exportar a fichero</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>006</KEY>
+       <ENTRY>Destino</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>008</KEY>
+       <ENTRY>Seleccionar directorio para descarga</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>009</KEY>
+       <ENTRY>¿Desea sobrescribir el fichero?</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>I</ID>
+       <KEY>010</KEY>
+       <ENTRY>Datos de inventario</ENTRY>
+       <LENGTH>50</LENGTH>
+      </item>
+      <item>
+       <ID>R</ID>
+       <ENTRY>Descargar ubicaciones y datos de recuento</ENTRY>
+       <LENGTH>70</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_APP</KEY>
+       <ENTRY>Añadir datos a fichero exist.</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_ASFILE</KEY>
+       <ENTRY>Fichero lógico</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_CNTR</KEY>
+       <ENTRY>Numerador</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_CREA</KEY>
+       <ENTRY>Crear fichero nuevo</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LFNAME</KEY>
+       <ENTRY>Nombre para fichero lógico</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LOC</KEY>
+       <ENTRY>Selección basada en ubicación</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PATH</KEY>
+       <ENTRY>Nombre para fichero local</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PCFILE</KEY>
+       <ENTRY>Fichero local</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_PROD</KEY>
+       <ENTRY>Selección basada en producto</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_REPL</KEY>
+       <ENTRY>Reemplazar fichero existente</ENTRY>
+       <LENGTH>38</LENGTH>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_COUND</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>18</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_LGNUM</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>24</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>P_REA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>37</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_AREA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>21</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_CAT_P</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>18</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_ENTITL</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>33</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_LPLA</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>19</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_MATNR</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>15</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+      <item>
+       <ID>S</ID>
+       <KEY>S_OWNER</KEY>
+       <ENTRY>.</ENTRY>
+       <LENGTH>13</LENGTH>
+       <SPLIT>D</SPLIT>
+      </item>
+     </TEXTPOOL>
+    </item>
+   </I18N_TPOOL>
+   <LONGTEXTS>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>Z_PI_STOCK_DWNLD</OBJECT>
+      <LANGU>D</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0012</VERSION>
+      <TXTLINES>00038</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>Z_PI_STOCK_DWNLD</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>D</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00012</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Mit diesem Report können Sie inventurrelevante Daten in Extended</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Warehouse Management (EWM) auswählen und in eine Datei herunterladen.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Die Daten können dann von einem externen Inventursystem verwendet</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>werden.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Die Struktur der Hochladedatei wird durch die Struktur</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>/SCWM/S_PI_STOCK_DWNLD definiert. Die Struktur wird auch in der</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Transaktion &lt;DS:TRAN./SCWM/PI_UPLOAD&gt;Lagerplätze und Zähldaten hochladen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>&lt;/&gt; verwendet.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Sie haben für den ausgewählten Inventurbereich im Customizing für &lt;LS&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>Extended Warehouse Management unter -&gt; SCM Basis -&gt; Inventur -&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Grundeinstellungen -&gt;&lt;/&gt; &lt;DS:SIMG./LIME/PI_VC_CUST_ARE&gt;Inventurbereich</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>festlegen&lt;/&gt; für die produktbezogene Inventur das Inventurverfahren &lt;ZK&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>ES&lt;/&gt; und für die lagerplatzbezogene Inventur das Inventurverfahren &lt;ZK&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>EL&lt;/&gt; aktiviert.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Wenn Sie das dezentrale EWM basierend auf SAP S/4HANA verwenden, haben</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Sie die Preise aus dem verbundenen Enterprise-Management-System, z.B.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SAP S/4HANA oder SAP ERP, ermittelt und festgelegt. Wählen Sie im</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Launchpad &lt;LS&gt;Extended Warehouse Management &lt;/&gt;&gt; &lt;LS&gt;Inventur &lt;/&gt;&gt; &lt;LS&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>Periodische Arbeiten&lt;/&gt;&gt; &lt;LS&gt;Preise aus ERP ermitteln und setzen&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Der Report lädt diese Daten als CSV- oder XLS-Datendatei auf einen PC</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>oder als CSV-Datendatei auf einen Server herunter, damit diese von einem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Fremdsystem verwendet werden können.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Beim Herunterladen auf einen Server wird der logische Dateiname</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>EWM_PI_DOWNLOAD verwendet. Weitere Informationen finden Sie in der C</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>ustomizing-Aktivität &lt;DS:SIMG.CFMENUSAPCFILE&gt;Dateinamen und Dateipfade</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>mandantenunabhängig pflegen&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Bei diesem Schritt werden die Felder QUAN (&lt;LS&gt;Buchbestandsmenge&lt;/&gt;),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>UNIT (&lt;LS&gt;Basismengeneinheit&lt;/&gt;), VPRSV (&lt;LS&gt;Preissteuerungskennzeichen</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>&lt;/&gt;), VERPR (&lt;LS&gt;Gleitender Durchschnittspreis/Periodischer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Verrechnungspreis&lt;/&gt;) und WAERS (&lt;LS&gt;Währungsschlüssel&lt;/&gt;) für die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>produktbezogene Inventur gefüllt.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Der Report erzeugt nur eine Zeile für Bestand in einem Platz mit den</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>gleichen Bestandsattributen. Dies kann der Fall sein, wenn sich in einem</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Platz mehrere HUs mit dem gleichen Bestand befinden. Da die HU-Daten</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>nicht heruntergeladen werden, werden die Mengen des Bestands kumuliert.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Wenn sich verschiedene Alternativmengeneinheiten (Alternativ-MEs) für</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Bestand mit den gleichen Attributen in einem Platz befinden, wird die</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Menge nur in der Basismengeneinheit zurückgegeben.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>Z_PI_STOCK_DWNLD</OBJECT>
+      <LANGU>E</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0012</VERSION>
+      <MASTERLANG>X</MASTERLANG>
+      <TXTLINES>00036</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>Z_PI_STOCK_DWNLD</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>E</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00012</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>You can use this report to select physical inventory-relevant data in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Extended Warehouse Management (EWM) and download it to a file, so that</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>it can be used by an external physical inventory system.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The structure of the upload file is defined by the structure</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>/SCWM/S_PI_STOCK_DWNLD. This structure is also used in the transaction</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE> &lt;DS:TRAN./SCWM/PI_UPLOAD&gt;Upload Storage Bins and Count Data&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>You have enabled the physical inventory procedure &lt;ZK&gt;ES&lt;/&gt;, for</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>product-based physical inventory, and &lt;ZK&gt;EL&lt;/&gt;, for location-based</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>physical inventory, in Customizing for the selected physical inventory</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>area under &lt;LS&gt;Extended Warehouse Management -&gt; SCM Basis -&gt; Physical</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Inventory -&gt; Basic Settings -&gt;&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>   &lt;DS:SIMG./LIME/PI_VC_CUST_ARE&gt;Define Physical Inventory Area.&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>If you are using decentralized EWM based on SAP S/4HANA, you have</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>determined and set the prices from the connected enterprise management</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>system (for example, SAP S/4HANA or SAP ERP). On the launchpad, choose</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;LS&gt;Extended Warehouse Management &lt;/&gt;&gt; &lt;LS&gt;Physical Inventory &lt;/&gt;&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;LS&gt;Periodic Processing &lt;/&gt;&gt; &lt;LS&gt;Determine and Set Prices from ERP&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>The report downloads this data as a CSV or XLS data file to a PC or as a</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>CSV data file to a server, so that it can be used by an external system.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>For download to a server, the logical file name EWM_PI_DOWNLOAD is used.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>For more information, see Customizing activity</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE> &lt;DS:SIMG.CFMENUSAPCFILE&gt;Cross-Client Maintenance of File Names and</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Paths&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Within this step, the fields QUAN (&lt;LS&gt;Book Inventory Quantity&lt;/&gt;), UNIT</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(&lt;LS&gt;Base Unit of Measure&lt;/&gt;), VPRSV (&lt;LS&gt;Price Control Indicator&lt;/&gt;),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>VERPR (&lt;LS&gt;Moving Average Price/Periodic Unit Price&lt;/&gt;), and WAERS (</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>&lt;LS&gt;Currency Key&lt;/&gt;) are filled for product-based physical inventory.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>The report produces only one line for stock in a bin that has the same</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>stock attributes. This can happen if there are multiple HUs with the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>same stock in one bin. As the HU information is not downloaded, the</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>quantities of the stock are accumulated. If there are different</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>alternative units of measure (UoMs) for stock with the same attributes</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>in one bin, the quantity is only returned in the base UoM.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>Z_PI_STOCK_DWNLD</OBJECT>
+      <LANGU>F</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0012</VERSION>
+      <TXTLINES>00039</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>Z_PI_STOCK_DWNLD</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>F</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00012</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Ce programme vous permet de sélectionner les données pertinentes pour</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>l&apos;inventaire dans Extended Warehouse Management (EWM) et de les</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>télécharger dans un fichier qui peut être utilisé par un système</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>d&apos;inventaire externe.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>La structure du fichier de chargement est définie par la structure</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>/SCWM/S_PI_STOCK_DWNLD. Cette structure est également utilisée dans la</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>transaction &lt;DS:TRAN./SCWM/PI_UPLOAD&gt;Charger emplacements et données de</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>comptage&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Vous avez activé la procédure d&apos;inventaire &lt;ZK&gt;ES&lt;/&gt; pour l&apos;inventaire</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>spécifique au produit et la procédure d&apos;inventaire &lt;ZK&gt;EL&lt;/&gt; pour</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>l&apos;inventaire spécifique à l&apos;emplacement dans le Customizing de la zone</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>d&apos;inventaire sélectionnée sous &lt;LS&gt;Extended Warehouse Management -&gt; SCM</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Basis -&gt; Inventaire -&gt; Options de base -&gt;&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:SIMG./LIME/PI_VC_CUST_ARE&gt;Définir zone d&apos;inventaire&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Si vous utilisez EWM décentralisée basée sur SAP S/4HANA, vous avez</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>déterminé et défini les prix à partir du système de gestion d&apos;entreprise</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>connecté (par exemple, SAP S/4HANA ou SAP ERP). Dans la barre de</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>lancement, sélectionnez &lt;LS&gt;Extended Warehouse Management &lt;/&gt;&gt; &lt;LS&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>Inventaire &lt;/&gt;&gt; &lt;LS&gt;Traitement périodique &lt;/&gt;&gt; &lt;LS&gt;Déterminer et activer</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>prix à partir de ERP&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Le programme télécharge ces données comme fichier de données CSV ou XLS</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sur un PC ou comme fichier de données CSV sur un serveur afin qu&apos;elles</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>puissent être utilisées par un système externe.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Le nom de fichier logique EWM_PI_DOWNLOAD est utilisé lors du</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>téléchargement sur un serveur. Pour en savoir plus, voir l&apos;activité IMG</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:SIMG.CFMENUSAPCFILE&gt;Gérer noms de fichiers et chemins d&apos;accès</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>indépendamment du mandant&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Dans cette étape, les zones QUAN (&lt;LS&gt;quantité de stock théorique&lt;/&gt;),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>UNIT (&lt;LS&gt;unité de quantité de base&lt;/&gt;), VPRSV (&lt;LS&gt;indicateur du code</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>prix&lt;/&gt;), VERPR (&lt;LS&gt;prix moyen pondéré/prix de cession périodique&lt;/&gt;)</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>et WAERS (&lt;LS&gt;clé de devise&lt;/&gt;) sont renseignées pour l&apos;inventaire</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>spécifique au produit.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Le programme génère une ligne uniquement pour le stock dans un</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>emplacement avec les mêmes attributs de stocks. Cela peut être le cas si</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>plusieurs UM existent dans un emplacement avec le même stock. Les</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>données d&apos;UM ne sont pas téléchargées. Ainsi, les quantités du stock</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>sont cumulées. Si différentes unités de quantité alternatives existent</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>dans un emplacement pour le stock avec les mêmes attributs, la quantité</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>n&apos;est réintégrée qu&apos;en unité de quantité de base.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>Z_PI_STOCK_DWNLD</OBJECT>
+      <LANGU>I</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0012</VERSION>
+      <TXTLINES>00038</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>Z_PI_STOCK_DWNLD</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>I</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00012</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Questo report consente di selezionare i dati rilevanti per inventario in</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Extended Warehouse Management (sistema EWM) e scaricarli in un file per</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>l&apos;utilizzo in un sistema esterno di inventario.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>La struttura del file di upload è definita dalla struttura</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>/SCWM/S_PI_STOCK_DWNLD. Tale struttura viene utilizzata anche nella</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>transazione &lt;DS:TRAN./SCWM/PI_UPLOAD&gt;Caricare ubicazioni magazzino e</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>dati conteggio&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Nel customizing per l&apos;area di inventario selezionata, in &lt;LS&gt;Extended</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Warehouse Management -&gt; Base SCM -&gt; Inventario -&gt; Parametrizzazione di</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>base -&gt;&lt;/&gt; &lt;DS:SIMG./LIME/PI_VC_CUST_ARE&gt;Definire area di inventario&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>per l&apos;inventario specifico del prodotto è stata attivata la procedura di</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>inventario &lt;ZK&gt;ES&lt;/&gt; e per l&apos;inventario dell&apos;ubicazione è stata attivata</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>la procedura di inventario &lt;ZK&gt;EL&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Se si sta utilizzando EWM decentralizzato basato su SAP S/4HANA, sono</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>stati determinati e impostati i prezzi dal sistema di gestione aziendale</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>connesso (ad esempio SAP S/eHANA o SAP ERP). Nel launchpad, selezionare</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;LS&gt;Extended Warehouse Management&lt;/&gt; &gt; &lt;LS&gt;Inventario&lt;/&gt; &gt; &lt;LS&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>Elaborazione periodica&lt;/&gt; &gt; &lt;LS&gt;Determinare e impostare prezzi da ERP&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Il report scarica questi dati come file di dati CSV o XLS su un PC o</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>come file di dati CSV su un server in modo tale che essi possano essere</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>utilizzati da un sistema esterno.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Durante il download su un server viene utilizzato il nome file logico</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>EWM_PI_DOWNLOAD. Per ulteriori informazioni consultare l&apos;attività di</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>customizing &lt;DS:SIMG.CFMENUSAPCFILE&gt;Aggiornare nomi e percorsi file</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>indipendenti dal mandante&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>In questa fase vengono completati i campi QUAN (&lt;LS&gt;quantità stock</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>contabile&lt;/&gt;), UNIT (&lt;LS&gt; unità di misura di base&lt;/&gt;), VPRSV (&lt;LS&gt;codice</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>controllo prezzo&lt;/&gt;), VERPR (&lt;LS&gt; prezzo a media mobile/prezzo medio di</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>periodo&lt;/&gt;) e WAERS (&lt;LS&gt;chiave divisa&lt;/&gt;) per l&apos;inventario specifico</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>del prodotto.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Il report crea solo una riga per lo stock in un&apos;ubicazione con gli</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>stessi attributi dello stock. Questo potrebbe essere il caso di u</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>n&apos;ubicazione in cui si trovano più UdM con lo stesso stock; considerando</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>che i dati dell&apos;UdM non vengono scaricati, le quantità dello stock</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>vengono accumulate. Se si trovano diverse unità di misura alternative</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(UdM) per lo stock con gli stessi attributi in un&apos;ubicazione, la</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>quantità viene riportata solo nell&apos;unità di misura di base.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>Z_PI_STOCK_DWNLD</OBJECT>
+      <LANGU>P</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0012</VERSION>
+      <TXTLINES>00039</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>Z_PI_STOCK_DWNLD</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>P</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00012</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Você pode usar este report para selecionar dados relevantes para o</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>inventário físico em Extended Warehouse Management (EWM) e baixá-los</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>para um arquivo, de modo a poderem ser usados por um sistema de</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>inventário físico externo.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>A estrutura do file de upload é definida por meio da estrutura</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SCWM/S_PI_STOCK_DWNLD. A estrutura é utilizada também na transação</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>&lt;DS:TRAN./SCWM/PI_UPLOAD&gt;Carregar posições no depósito e dados de</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>contagem&lt;/&gt; .</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Você ativou o método de inventário físico &lt;ZK&gt;ES&lt;/&gt;, para o inventário</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>físico relativo ao produto, e &lt;ZK&gt;EL&lt;/&gt;, para o inventário físico</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>baseado na unidade gerencial, no customizing para a área do inventário</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>físico selecionada, em &lt;LS&gt;Extended Warehouse Management -&gt; SCM Basis -&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Inventário físico -&gt; Configurações básicas -&gt;&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>  &lt;DS:SIMG./LIME/PI_VC_CUST_ARE&gt;Definir área do inventário físico.&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Se você estiver usando EWM descentralizado basedo em SAP S/4HANA, você</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>determinou e definiu os preços a partir do sistema de gestão empresarial</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>conectado (por exemplo, SAP S/4HANA ou SAP ERP). No launchpad, selecione</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE> &lt;LS&gt;Extended Warehouse Management &lt;/&gt;&gt; &lt;LS&gt;Inventário físico &lt;/&gt;&gt; &lt;LS&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>Processamento periódico &lt;/&gt;&gt; &lt;LS&gt;Determinar e definir preços a partir de</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ERP&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>O report baixa esses dados como arquivo de dados CSV ou XLS para um PC</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ou como arquivo de dados CSV para um servidor, para que os mesmos possam</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ser usados por um sistema externo.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Para download para um servidor é usado o nome lógico de file</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>EWM_PI_DOWNLOAD. Para maiores informações, consulte a atividade de cust</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>omizing &lt;DS:SIMG.CFMENUSAPCFILE&gt;Atualização válida para vários mandantes</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>de nomes e caminhos de arquivo&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>Nesta etapa, os campos QUAN (&lt;LS&gt;quantidade de estoque contábil&lt;/&gt;),</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>UNIT (&lt;LS&gt;unidade de medida básica&lt;/&gt;), VPRSV (&lt;LS&gt;código de controle de</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>preço&lt;/&gt;), VERPR (&lt;LS&gt;preço médio móvel/preço interno periódico&lt;/&gt;) e</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>WAERS (&lt;LS&gt;código da moeda&lt;/&gt;) são preenchidos para o inventário físico</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>baseado no produto.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>O report produz somente uma linha para estoque em uma posição no</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>depósito com os mesmos atributos do estoque. Isso pode acontecer, se</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>existirem várias UCs com o mesmo estoque em uma posição no depósito. Uma</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>vez que as informações da UC não são baixadas, as quantidades do estoque</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>são acumuladas. Se existirem várias unidades de medida alternativas</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>(UMs) para o estoque com os mesmos atributos em uma posição no depósito,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>a quantidade só é retornada na unidade de medida básica.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+    <item>
+     <DOKIL>
+      <ID>RE</ID>
+      <OBJECT>Z_PI_STOCK_DWNLD</OBJECT>
+      <LANGU>S</LANGU>
+      <TYP>E</TYP>
+      <VERSION>0012</VERSION>
+      <TXTLINES>00039</TXTLINES>
+      <DOKSTATE>A</DOKSTATE>
+     </DOKIL>
+     <HEAD>
+      <TDOBJECT>DOKU</TDOBJECT>
+      <TDNAME>Z_PI_STOCK_DWNLD</TDNAME>
+      <TDID>RE</TDID>
+      <TDSPRAS>S</TDSPRAS>
+      <TDFORM>S_DOCU_SHOW</TDFORM>
+      <TDSTYLE>S_DOCUS1</TDSTYLE>
+      <TDVERSION>00012</TDVERSION>
+      <TDLINESIZE>072</TDLINESIZE>
+     </HEAD>
+     <LINES>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PURPOSE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Puede utilizar este informe para seleccionar los datos relevantes para</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>el inventario físico en Extended Warehouse Management (EWM) y</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>descargarlo a un archivo de forma que un sistema de inventario externo</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>pueda utilizarlo.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;INTEGRATION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>La estructura del archivo cargado se define mediante la estructura</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>/SCWM/S_PI_STOCK_DWNLD. La estructura se utiliza también en la tr</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>ansacción &lt;DS:TRAN./SCWM/PI_UPLOAD&gt;Cargar ubicaciones y datos recuento</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;PREREQUISITES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Se ha activado en Customizing el procedimiento de inventario para el</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>inventario de productos &lt;ZK&gt;ES&lt;/&gt; y el procedimiento de inventario para</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>el inventario de ubicaciones &lt;ZK&gt;EL&lt;/&gt;, para el área de inventario</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>seleccionada bajo &lt;LS&gt;Extended Warehouse Management -&gt; SCM Basis -&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>Inventario -&gt; Opciones básicas -&gt; &lt;/&gt; &lt;DS:SIMG./LIME/PI_VC_CUST_ARE&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>Especificar área de inventario&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Si está utilizando EWM basado en SAP S/4HANA, ha determinado y fijado</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>los precios del sistema de gestión empresarial conectado (por ejemplo,</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>SAP S/4HANA o SAP ERP). En la plataforma de lanzamiento, seleccione &lt;LS&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>Extended Warehouse Management &lt;/&gt;&gt; &lt;LS&gt;Inventario físico &lt;/&gt;&gt; &lt;LS&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>Proceso periódico &lt;/&gt;&gt; &lt;LS&gt;Determinar y fijar precios a partir de ERP&lt;/&gt;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;FEATURES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;SELECTION&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;STANDARD_VARIANTS&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U2</TDFORMAT>
+       <TDLINE>&amp;OUTPUT&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>El informe descarga estos datos como archivo de datos CSV o XLS en un PC</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>o como archivo de datos CSV en un servidor, de modo que un sistema</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>externo los pueda utilizar.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+       <TDLINE>Al descargar en un servidor se utiliza el nombre de fichero lógico</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>EWM_PI_DOWNLOAD. Para más información, véase en la actividad Customizing</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE> &lt;DS:SIMG.CFMENUSAPCFILE&gt;Actualizar nombres de fichero y vías de acceso</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>de fichero independientemente del mandante&lt;/&gt;.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>En este paso se rellenan los campos para el inventario de productos:</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>QUAN (&lt;LS&gt;Cantidad de stock teórico&lt;/&gt;), UNIT (&lt;LS&gt;Unidad de medida base</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>&lt;/&gt;), VPRSV (&lt;LS&gt;Indicador de control de precio&lt;/&gt;), VERPR (&lt;LS&gt;Precio</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>medio variable/Precio interno periódico&lt;/&gt;) y WAERS (&lt;LS&gt;Clave de moneda</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>=</TDFORMAT>
+       <TDLINE>&lt;/&gt;).</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>*</TDFORMAT>
+       <TDLINE>El informe solo produce una línea para el stock en una ubicación que</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>tiene los mismos atributos de stock. Esto puede suceder si en una</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ubicación existen varias UMp con el mismo stock. Como los datos de UMp</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>no se descargan, se acumularán las cantidades del stock. Si en una</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>ubicación hay distintas unidades de medida alternativas para el stock</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>con los mismos atributos, la cantidad se devuelve sólo en la unidad de</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDLINE>medida base.</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;ACTIVITIES&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>U1</TDFORMAT>
+       <TDLINE>&amp;EXAMPLE&amp;</TDLINE>
+      </TLINE>
+      <TLINE>
+       <TDFORMAT>AS</TDFORMAT>
+      </TLINE>
+     </LINES>
+    </item>
+   </LONGTEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

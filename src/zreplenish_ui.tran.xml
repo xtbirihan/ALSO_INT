@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_TRAN" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <TSTC>
+    <TCODE>ZREPLENISH_UI</TCODE>
+    <CINFO>CA==</CINFO>
+   </TSTC>
+   <TSTCC>
+    <TCODE>ZREPLENISH_UI</TCODE>
+   </TSTCC>
+   <TSTCT>
+    <SPRSL>E</SPRSL>
+    <TCODE>ZREPLENISH_UI</TCODE>
+    <TTEXT>Partial Replenishment UI</TTEXT>
+   </TSTCT>
+   <TSTCP>
+    <TCODE>ZREPLENISH_UI</TCODE>
+    <PARAM>\CLASS=ZCL_REPLENISHMENT_UI\METHOD=START</PARAM>
+   </TSTCP>
+  </asx:values>
+ </asx:abap>
+</abapGit>

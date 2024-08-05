@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZINT_000_DE_NAME_FELD</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>FDNAME</DOMNAME>
+    <MEMORYID>DFD</MEMORYID>
+    <HEADLEN>10</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>18</SCRLEN3>
+    <DDTEXT>Field name</DDTEXT>
+    <REPTEXT>Field name</REPTEXT>
+    <SCRTEXT_S>Field name</SCRTEXT_S>
+    <SCRTEXT_M>Field name</SCRTEXT_M>
+    <SCRTEXT_L>Field name</SCRTEXT_L>
+    <APPLCLASS>SDIC</APPLCLASS>
+    <AUTHCLASS>01</AUTHCLASS>
+    <DTELMASTER>D</DTELMASTER>
+    <DEFFDNAME>FIELD_NAME</DEFFDNAME>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>D</LANGU>
+    <LANGU>T</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>D</DDLANGUAGE>
+     <DDTEXT>Feldname</DDTEXT>
+     <REPTEXT>Feldname</REPTEXT>
+     <SCRTEXT_S>Feldname</SCRTEXT_S>
+     <SCRTEXT_M>Feldname</SCRTEXT_M>
+     <SCRTEXT_L>Feldname</SCRTEXT_L>
+    </item>
+    <item>
+     <DDLANGUAGE>T</DDLANGUAGE>
+     <DDTEXT>Kontro edilecek tablo alanı</DDTEXT>
+     <REPTEXT>KontTabAln</REPTEXT>
+     <SCRTEXT_S>K.tab.alan</SCRTEXT_S>
+     <SCRTEXT_M>Kont tablo alan</SCRTEXT_M>
+     <SCRTEXT_L>Kont tablosu alanı</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_CLAS" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOCLASS>
+    <CLSNAME>ZCL_INT_PRINT_MANAGEMENT</CLSNAME>
+    <LANGU>E</LANGU>
+    <DESCRIPT>Overrides the printer control for custom forms</DESCRIPT>
+    <STATE>1</STATE>
+    <CLSCCINCL>X</CLSCCINCL>
+    <FIXPT>X</FIXPT>
+    <UNICODE>X</UNICODE>
+   </VSEOCLASS>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CMPNAME>C_RETOURE</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Smart Forms: Form Name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>GET_FUNCNAME</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Get function name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_FORM</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Smart Forms: Form Name</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CMPNAME>MV_PROGNAME</CMPNAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ABAP Program Name</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+   <DESCRIPTIONS_SUB>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FUNCNAME</CMPNAME>
+     <SCONAME>CV_FUNCNAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Function name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FUNCNAME</CMPNAME>
+     <SCONAME>IV_FORMNAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>Smart Forms: Form Name</DESCRIPT>
+    </SEOSUBCOTX>
+    <SEOSUBCOTX>
+     <CMPNAME>GET_FUNCNAME</CMPNAME>
+     <SCONAME>IV_PROGNAME</SCONAME>
+     <LANGU>E</LANGU>
+     <DESCRIPT>ABAP Program Name</DESCRIPT>
+    </SEOSUBCOTX>
+   </DESCRIPTIONS_SUB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
